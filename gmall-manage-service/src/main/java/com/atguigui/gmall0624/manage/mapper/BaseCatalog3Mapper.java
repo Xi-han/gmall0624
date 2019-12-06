@@ -1,0 +1,11 @@
+package com.atguigui.gmall0624.manage.mapper;
+
+import com.atguigu.gmall0624.bean.BaseCatalog2;
+import com.atguigu.gmall0624.bean.BaseCatalog3;
+import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
+
+public interface BaseCatalog3Mapper extends Mapper<BaseCatalog3> {
+
+}
