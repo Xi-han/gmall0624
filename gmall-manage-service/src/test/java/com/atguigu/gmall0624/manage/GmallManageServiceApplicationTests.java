@@ -1,4 +1,4 @@
-package com.atguigui.gmall0624.manage;
+package com.atguigu.gmall0624.manage;
 
 
 import org.junit.Test;

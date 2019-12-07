@@ -1,11 +1,11 @@
-package com.atguigui.gmall0624.manage;
+package com.atguigu.gmall0624.manage;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan("com.atguigui.gmall0624.manage.mapper")
+@MapperScan("com.atguigu.gmall0624.manage.mapper")
 public class GmallManageServiceApplication {
 
 	public static void main(String[] args) {
