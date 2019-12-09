@@ -1,11 +1,10 @@
 package com.atguigu.gmall0624.manage.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.atguigu.gmall0624.bean.BaseSaleAttr;
 import com.atguigu.gmall0624.bean.SpuInfo;
 import com.atguigu.gmall0624.service.ManageService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,4 +20,16 @@ public class SpuManageController {
         List<SpuInfo> spuInfoList = manageService.getSpuInfoList(spuInfo);
         return spuInfoList;
     }
+    @RequestMapping("baseSaleAttrList")
+    @ResponseBody
+    public List<BaseSaleAttr> getBaseSaleAttrList(){
+        return   manageService.getBaseSaleAttrList();
+    }
+    @RequestMapping("saveSpuInfo")
+    @ResponseBody
+    public String saveSpuInfo(@RequestBody SpuInfo spuInfo){
+        manageService.saveSpuInfo(spuInfo);
+        return  "OK";
+    }
+
 }

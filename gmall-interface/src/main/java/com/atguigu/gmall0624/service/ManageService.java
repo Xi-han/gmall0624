@@ -68,5 +68,9 @@ public interface ManageService {
      * @return
      */
     List<SpuInfo> getSpuInfoList(SpuInfo spuInfo);
+    // 查询基本销售属性表
+    List<BaseSaleAttr> getBaseSaleAttrList();
+
+    public void saveSpuInfo(SpuInfo spuInfo);
 }
 
