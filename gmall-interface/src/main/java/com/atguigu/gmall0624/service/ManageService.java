@@ -5,6 +5,7 @@ import com.atguigu.gmall0624.bean.*;
 import java.util.List;
 
 public interface ManageService {
+
     // 编写功能方法
 
     /**
@@ -64,13 +65,57 @@ public interface ManageService {
 
     /**
      *
+     * @param catalog3Id
+     * @return
+     */
+    List<SpuInfo> getSpuList(String catalog3Id);
+
+    /**
+     * 根据spuInfo 属性查询spuInfo集合
      * @param spuInfo
      * @return
      */
-    List<SpuInfo> getSpuInfoList(SpuInfo spuInfo);
-    // 查询基本销售属性表
+    List<SpuInfo> getSpuList(SpuInfo spuInfo);
+
+
+    /**
+     * 查询所有的销售属性
+     * @return
+     */
     List<BaseSaleAttr> getBaseSaleAttrList();
 
-    public void saveSpuInfo(SpuInfo spuInfo);
-}
+    /**
+     * 保存spuInfo 数据
+     * @param spuInfo
+     */
+    void saveSpuInfo(SpuInfo spuInfo);
 
+    /**
+     * 根据属性查询图片集合
+     * @param spuImage
+     * @return
+     */
+    List<SpuImage> getSpuImageList(SpuImage spuImage);
+
+    /**
+     * 根据三级分类Id 查询数据
+     * @param catalog3Id
+     * @return
+     */
+    List<BaseAttrInfo> getAttrInfoList(String catalog3Id);
+
+    /**
+     * 根据spuId 查询销售属性集合
+     * @param spuId
+     * @return
+     */
+    List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
+
+    /**
+     * 大保存skuInfo
+     * @param skuInfo
+     */
+    void saveSkuInfo(SkuInfo skuInfo);
+
+
+}
