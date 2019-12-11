@@ -117,5 +117,14 @@ public interface ManageService {
      */
     void saveSkuInfo(SkuInfo skuInfo);
 
+    /**
+     * 根据商品id查找商品信息，图片信息并在页面显示
+     * @param skuId
+     * @return
+     */
+    SkuInfo getSkuInfo(String skuId);
 
+    List<SpuSaleAttr> getSpuSaleAttrListCheckBySku(SkuInfo skuInfo);
+
+    List<SkuSaleAttrValue> getSkuSaleAttrValueListBySpu(String spuId);
 }
