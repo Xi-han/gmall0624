@@ -28,16 +28,16 @@ public class FileUploadController {
     public String fileUpload(MultipartFile file)throws IOException, MyException {
         String imgUrl = fileUrl; //  imgUrl = http://192.168.67.225
 
-        if (file != null) {
+        if (file!=null){
             // 上传谁回显谁！
             // 表示读取配置文件中的tracker.conf
-            String configFile = this.getClass().getResource("/tracker.conf").getFile();
+            String configFile  = this.getClass().getResource("/tracker.conf").getFile();
             // 初始化
-            ClientGlobal.init(configFile);
-            TrackerClient trackerClient = new TrackerClient();
-            TrackerServer trackerServer = trackerClient.getConnection();
+            ClientGlobal.init(configFile );
+            TrackerClient trackerClient=new TrackerClient();
+            TrackerServer trackerServer=trackerClient.getConnection();
             // 存储数据
-            StorageClient storageClient = new StorageClient(trackerServer, null);
+            StorageClient storageClient=new StorageClient(trackerServer,null);
             // String orginalFilename="e://img//zly.jpg";
             // 获取上传的文件名称 // zly.jpg
             String originalFilename = file.getOriginalFilename();
@@ -50,7 +50,7 @@ public class FileUploadController {
             for (int i = 0; i < upload_file.length; i++) {
                 String path = upload_file[i];
                 // System.out.println("s = " + s);
-                imgUrl += "/" + path; // imgUrl=imgUrl+path
+                imgUrl+="/"+path; // imgUrl=imgUrl+path
                 // http://192.168.67.225/group1/M00/00/00/wKhD4V3rSbWAevpcAACGx2c4tJ4978.jpg
 
 			/*
@@ -62,4 +62,5 @@ public class FileUploadController {
         //  return "http://192.168.67.225/group1/M00/00/00/wKhD4V3rSbWAevpcAACGx2c4tJ4978.jpg";
         return imgUrl;
     }
+
 }

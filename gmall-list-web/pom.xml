@@ -19,12 +19,34 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<groupId>com.atguigu.gmall0624</groupId>
+			<artifactId>gmall-interface</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.atguigu.gmall0624</groupId>
+			<artifactId>gmall-web-util</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!--导入es-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-elasticsearch</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/io.searchbox/jest -->
+		<dependency>
+			<groupId>io.searchbox</groupId>
+			<artifactId>jest</artifactId>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
+		<dependency>
+			<groupId>net.java.dev.jna</groupId>
+			<artifactId>jna</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

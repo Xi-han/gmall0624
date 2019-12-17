@@ -21,6 +21,7 @@ public class SkuManageController {
 
     @Reference
     private ListService listService;
+
     // http://localhost:8082/spuImageList?spuId=60
     @RequestMapping("spuImageList")
     public List<SpuImage> getSpuImageList(SpuImage spuImage){
@@ -51,5 +52,4 @@ public class SkuManageController {
         // 调用上传服务
         listService.saveSkuLsInfo(skuLsInfo);
     }
-
 }

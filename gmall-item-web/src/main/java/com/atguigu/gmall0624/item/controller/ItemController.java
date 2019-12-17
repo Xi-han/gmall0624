@@ -65,4 +65,7 @@ public class ItemController {
         request.setAttribute("skuInfo",skuInfo);
         return "item";
     }
+
+
+
 }
